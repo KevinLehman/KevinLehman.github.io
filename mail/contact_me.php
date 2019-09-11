@@ -20,8 +20,8 @@ $header .= "Reply-To: $email";
 //if(!mail($to, $subject, $body, $header))
   //http_response_code(500);
 
-$email=email($to, "Subject: $email_subject",$message);
-if($email){
+$mail=mail($to, "Subject: $email_subject",$message);
+if($mail){
   echo "Thank you for using our mail form.";
 }else {
   echo "Mail sending failed.";
